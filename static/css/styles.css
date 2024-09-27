@@ -91,3 +91,8 @@ ul {
 li {
     margin: 10px 0;
 }
+
+.tiny {
+    font-size: 12px;
+    font-style: italic;
+}
