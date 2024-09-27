@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter PIN</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+    <div class="atm-container">
+
+        <h1>Welcome to the ATM</h1>
+        <form action="/validate_pin" method="post">
+            <label for="pin">Enter your PIN:</label>
+            <input type="password" name="pin" id="pin" required>
+            <button type="submit">Submit</button>
+        </form>
+        {% if error %}
+            <p style="color:red;">{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

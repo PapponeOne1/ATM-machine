@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Menu</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+    <div class="atm-container">
+
+        <h1>ATM Main Menu</h1>
+        <ul>
+            <li><a href="/balance">Check Balance</a></li>
+            <li><a href="/deposit">Deposit</a></li>
+            <li><a href="/withdraw">Withdraw</a></li>
+            <li><a href="/exit">Exit</a></li>
+        </ul>
+        {% if message %}
+            <p style="color:green;">{{ message }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
