@@ -55,7 +55,7 @@ def withdraw():
 
 @app.route('/exit')
 def exit():
-    return "Thank you for using our ATM service. Goodbye!"
+    return render_template('pin.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
